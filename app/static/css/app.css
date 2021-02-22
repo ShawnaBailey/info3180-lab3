@@ -1,3 +1,13 @@
 body {
     padding-top: 5rem;
 }
+    .sendbutton { 
+        background-color: rgb(55, 43, 223);
+        color: white;
+    }
+.required{
+    color: red;
+}
+.hr{
+    border-top:  solid purple 
+}

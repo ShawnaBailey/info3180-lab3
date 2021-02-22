@@ -8,21 +8,42 @@
 {% block main %}
 <div class="main">
 	<h2>CONTACT FORM</h2>
+	<hr class="hr">
 	<p>Fill in this form to contact the site owners.</p>
 	<form action="{{ url_for('contact') }}" method="POST">
 	{{form.csrf_token}}
-		Name </br>
-		Please enter your full name </br>
-		{{ form.name }} </br>
-		Email </br>
-		Please enter your email address </br>
-		{{ form.email }} </br>
-		Subject </br>
-		{{ form.subject }} </br>
-		Message </br>
-		Please enter the message you want to send </br>
-		{{ form.message }} </br>
-		{{ form.send }}
+	<div class="formL">
+		<div>
+			<label for= "name">Name <strong class= "required">(Required)</strong> </label> 
+			<p>Please enter your full name</p>
+			{{ form.name }}
+		</div>
+		<br>
+
+		<div>
+			<label for= "email">E-mail<strong class= "required">(Required)</strong> </label> 
+			<p>Please enter your e-mail address</p>
+			{{ form.email }}
+		</div>
+		<br>
+
+		<div>
+			<label for= subject>Subject<strong class= "required">(Required)</strong></label>
+			<p>Please enter the subject for you message.</p>
+			{{ form.subject}}
+		</div>
+		<br>
+
+		<div>
+			<label for= "message">Message<strong class= "required">(Required)</strong> </label> 
+			<p>Please enter the message you would like to send.</p>
+			{{ form.subject }}
+		</div>
+		<br>
+
+		<button type="submit" class= "sendbutton">Send</button>
+
+	</div>
         
 	</form>
 </div>
